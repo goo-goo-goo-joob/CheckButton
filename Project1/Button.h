@@ -10,7 +10,7 @@ protected:
 public:
 	Button();
 	~Button();
-	void setText(const string text);
+	void setText(const string& text);
 	void setFunc(void(*f)(void));
 };
 

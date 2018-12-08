@@ -154,7 +154,6 @@
   <ItemGroup>
     <ClInclude Include="Button.h" />
     <ClInclude Include="CheckBox.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Widget.h" />
     <ClInclude Include="zgl.h" />
   </ItemGroup>

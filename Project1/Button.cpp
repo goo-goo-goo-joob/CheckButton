@@ -15,13 +15,14 @@ Button::Button()
 	_state = false;
 	_text = "None";
 	_isClicked = 0;
+	_func = nullptr;
 }
 
 Button::~Button()
 {
 }
 
-void Button::setText(const string text)
+void Button::setText(const string& text)
 {
 	_text = text;
 }
