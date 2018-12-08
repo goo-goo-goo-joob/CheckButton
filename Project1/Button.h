@@ -1,6 +1,4 @@
-#ifndef  BUTTON_H
-#define  BUTTON_H
-
+#pragma once
 #include "Widget.h"
 class Button :
 	public Widget
@@ -8,12 +6,11 @@ class Button :
 protected:
 	bool _state;
 	string _text;
-	void (*_func) ();
+	void(*_func) ();
 public:
 	Button();
 	~Button();
-	void setText(const string text);
+	void setText(const string& text);
 	void setFunc(void(*f)(void));
 };
 
-#endif /*BUTTON_H*/

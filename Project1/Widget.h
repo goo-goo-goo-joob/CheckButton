@@ -1,6 +1,4 @@
-#ifndef  WIDGET_H
-#define  WIDGET_H
-
+#pragma once
 #include <iostream>
 #include <string>
 #include "zgl.h"
@@ -25,5 +23,3 @@ public:
 	bool Inside(int x, int y) const;
 	virtual void MouseClick(int x, int y);
 };
-
-#endif /*WIDGET_H*/

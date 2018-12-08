@@ -1,3 +1,5 @@
+// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "Widget.h"
 #include "Button.h"
 #include "CheckBox.h"
@@ -18,7 +20,7 @@ int main()
 	zgl_SetUserDrawFunction(Draw);
 	zgl_SetUserMouseFunction(Mouse);
 
-	
+
 
 	return zgl_Main();
 }

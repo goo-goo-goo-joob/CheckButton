@@ -1,3 +1,5 @@
+// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "Button.h"
 
 
@@ -13,13 +15,14 @@ Button::Button()
 	_state = false;
 	_text = "None";
 	_isClicked = 0;
+	_func = nullptr;
 }
 
 Button::~Button()
 {
 }
 
-void Button::setText(const string text)
+void Button::setText(const string& text)
 {
 	_text = text;
 }
