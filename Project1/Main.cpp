@@ -20,7 +20,7 @@ int main()
 	zgl_SetUserDrawFunction(Draw);
 	zgl_SetUserMouseFunction(Mouse);
 
-	
+
 
 	return zgl_Main();
 }
