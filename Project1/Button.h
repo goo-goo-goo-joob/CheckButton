@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BUTTON_H
+#define BUTTON_H
+
 #include "Widget.h"
 class Button :
 	public Widget
@@ -14,3 +16,4 @@ public:
 	void setFunc(void(*f)(void));
 };
 
+#endif /*BUTTON_H*/

@@ -1,5 +1,6 @@
-#pragma once
-#include <iostream>
+#ifndef WIDGET_H
+#define WIDGET_H
+
 #include <string>
 #include "zgl.h"
 #pragma warning(disable: 4996) 
@@ -23,3 +24,5 @@ public:
 	bool Inside(int x, int y) const;
 	virtual void MouseClick(int x, int y);
 };
+
+#endif /*WIDGET_H*/

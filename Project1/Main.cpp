@@ -11,7 +11,7 @@ void Mouse(unsigned int button, int x, int y);
 CheckBox cb = CheckBox();
 int main()
 {
-	zgl_CreateWindow(640, 480, "The W");
+	zgl_CreateWindow(640, 380, "The W");
 	zgl_SetWindowColor(ZGL_GRAY);
 	zgl_SetFontColor(ZGL_BLACK);
 	zgl_SetDrawColor(ZGL_DARKGRAY);
@@ -20,7 +20,7 @@ int main()
 	zgl_SetUserDrawFunction(Draw);
 	zgl_SetUserMouseFunction(Mouse);
 
-
+	cb.setText("Agree with licence.");
 
 	return zgl_Main();
 }
@@ -32,6 +32,6 @@ void Mouse(unsigned int button, int x, int y)
 
 void Draw(void)
 {
-	//cb.Draw();
+	cb.Draw();
 }
 

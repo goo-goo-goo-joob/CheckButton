@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CHECKBOX_H
+#define CHECKBOX_H
+
 #include "Button.h"
 class CheckBox :
 	public Button
@@ -9,3 +11,4 @@ public:
 	void Draw() override;
 };
 
+#endif /*CHECKBOX_H*/
