@@ -6,11 +6,11 @@ class Button :
 	public Widget
 {
 protected:
-	bool _state;
 	string _text;
 	void(*_func) ();
 public:
 	Button();
+	Button(int h, int w, int x, int y, const string & text);
 	~Button();
 	void setText(const string& text);
 	void setFunc(void(*f)(void));

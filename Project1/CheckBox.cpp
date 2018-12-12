@@ -6,6 +6,12 @@
 
 CheckBox::CheckBox()
 {
+	_state = false;
+}
+
+CheckBox::CheckBox(int h, int w, int x, int y, const string & text, bool state) :Button(h, w, x, y, text)
+{
+	_state = state;
 }
 
 
@@ -16,16 +22,15 @@ CheckBox::~CheckBox()
 void CheckBox::Draw()
 {
 	zgl_DrawRect(_x_pos, _y_pos, _w, _h);
-	zgl_LoadFont("1251");
-	zgl_DrawString(300, 150, _text.c_str());
-	if (Inside(_x, _y) && _isClicked > 1) {
-		_state = !_state;
-	}
-	if (_isClicked > 1)
-		_isClicked = 0;
+	zgl_DrawString(_x_pos + _w + 15, _y_pos + _h / 2 - 8, _text.c_str());
 	if (_state) {
-		zgl_DrawLine(100, 100, 200, 200);
-		zgl_DrawLine(200, 100, 100, 200);
+		zgl_DrawLine(_x_pos, _y_pos, _x_pos + _w, _y_pos + _h);
+		zgl_DrawLine(_x_pos + _w, _y_pos, _x_pos, _y_pos + _h);
 	}
 
+}
+
+void CheckBox::MouseClick(int x, int y)
+{
+	_state = !_state;
 }

@@ -8,30 +8,45 @@
 void Draw(void);
 void Mouse(unsigned int button, int x, int y);
 
-CheckBox cb = CheckBox();
+CheckBox*  cbList;
+int cbCount = 3;
+
+int isClicked = 0;
 int main()
 {
+	cbList = new CheckBox[cbCount];
+	cbList[0] = CheckBox(50, 50, 50, 50, "Accept End user agreement");
+	cbList[1] = CheckBox(10, 10, 50, 150, "Xerak");
+	cbList[2] = CheckBox(50, 50, 50, 200, "XyYak");
 	zgl_CreateWindow(640, 380, "The W");
 	zgl_SetWindowColor(ZGL_GRAY);
 	zgl_SetFontColor(ZGL_BLACK);
 	zgl_SetDrawColor(ZGL_DARKGRAY);
 
+	zgl_LoadFont("1251");
 
 	zgl_SetUserDrawFunction(Draw);
 	zgl_SetUserMouseFunction(Mouse);
-
-	cb.setText("Agree with licence.");
-
-	return zgl_Main();
+	auto result = zgl_Main();
+	delete[] cbList;
+	return result;
 }
 
 void Mouse(unsigned int button, int x, int y)
 {
-	cb.MouseClick(x, y);
+	isClicked += 1;
+	if (isClicked > 1) {
+		for (int i = 0; i < cbCount; i++)
+			if (cbList[i].Inside(x, y))
+				cbList[i].MouseClick(x, y);
+	}
+	if (isClicked > 1)
+		isClicked = 0;
 }
 
 void Draw(void)
 {
-	cb.Draw();
+	for (int i = 0; i < cbCount; i++)
+		cbList[i].Draw();
 }
 

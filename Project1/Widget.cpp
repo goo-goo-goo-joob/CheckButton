@@ -6,6 +6,18 @@
 
 Widget::Widget()
 {
+	_h = 0;
+	_w = 0;
+	_x_pos = 0;
+	_y_pos = 0;
+}
+
+Widget::Widget(int h, int w, int x, int y)
+{
+	_h = h;
+	_w = w;
+	_x_pos = x;
+	_y_pos = y;
 }
 
 
@@ -26,9 +38,3 @@ bool Widget::Inside(int x, int y) const
 	return false;
 }
 
-void Widget::MouseClick(int x, int y)
-{
-	_x = x;
-	_y = y;
-	_isClicked += 1;
-}
