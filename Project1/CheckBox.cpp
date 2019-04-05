@@ -33,4 +33,6 @@ void CheckBox::Draw()
 void CheckBox::MouseClick(int x, int y)
 {
 	_state = !_state;
+	if (_func)
+		_func();
 }

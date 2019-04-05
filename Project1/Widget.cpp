@@ -2,8 +2,6 @@
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "Widget.h"
 
-
-
 Widget::Widget()
 {
 	_h = 0;

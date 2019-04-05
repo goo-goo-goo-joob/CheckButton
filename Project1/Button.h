@@ -1,6 +1,6 @@
 #ifndef BUTTON_H
 #define BUTTON_H
-
+#define ZGL_SHARED
 #include "Widget.h"
 class Button :
 	public Widget
